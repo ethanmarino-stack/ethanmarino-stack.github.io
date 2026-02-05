@@ -23,9 +23,17 @@
       backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 2rem;
-      padding: 1rem 0;
+      padding: 1rem 2rem;
       z-index: 1000;
+    }
+
+    .brand {
+      position: absolute;
+      left: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     nav a {
@@ -185,6 +193,7 @@
 <body>
 
   <nav>
+    <div class="brand">Your Name</div>
     <a href="#about">About Me</a>
     <a href="#gallery">Gallery</a>
     <a href="#portfolio">Portfolio</a>
