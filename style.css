@@ -232,3 +232,16 @@ section.active {
     height: 320px;
   }
 }
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.gallery-item .caption {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
