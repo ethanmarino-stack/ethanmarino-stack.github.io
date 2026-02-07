@@ -264,7 +264,11 @@ section.active {
 
 @media (max-width: 768px) {
   .about-side {
-    display: none;
+    display: block;
+    width: 200px;
+    height: 260px;
+    margin-top: 1.5rem;
+    opacity: 0.85;
   }
 }
 
