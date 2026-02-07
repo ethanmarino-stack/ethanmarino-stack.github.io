@@ -247,15 +247,16 @@ section.active {
 }
 
 .portfolio-intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.portfolio-intro p {
   max-width: 800px;
-  margin: 0 auto 2rem auto;
   text-align: center;
   font-size: 0.95rem;
   color: #aaa;
   line-height: 1.6;
-}
-
-.portfolio-intro strong {
-  color: #fff;
-  font-weight: 500;
 }
