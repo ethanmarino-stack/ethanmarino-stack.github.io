@@ -25,17 +25,18 @@ nav {
   background: rgba(15, 15, 15, 0.8);
   backdrop-filter: blur(10px);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 3rem;
+  gap: 2rem;
+  padding: 1rem 2rem;
   z-index: 1000;
 }
 
 .brand {
+  position: absolute;
+  left: 2rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 nav a {
@@ -46,7 +47,9 @@ nav a {
 
 .nav-links {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -381,6 +384,7 @@ section.active {
   }
 
   .brand {
+    position: static;
     font-size: 0.95rem;
     margin-bottom: 0.1rem;
   }
@@ -396,7 +400,7 @@ section.active {
 
   .nav-links {
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
   }
