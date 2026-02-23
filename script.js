@@ -3,8 +3,8 @@ window.addEventListener('load', () => {
   document.body.classList.remove('loading');
 });
 
-// Section reveal on scroll
-const sections = document.querySelectorAll('section');
+// Section reveal on scroll — includes both section and .portfolio-section
+const revealTargets = document.querySelectorAll('section, .portfolio-section');
 
 const observer = new IntersectionObserver(
   entries => {
@@ -14,18 +14,19 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.2 }
+  { threshold: 0.1 }
 );
 
-sections.forEach(section => observer.observe(section));
+revealTargets.forEach(el => observer.observe(el));
 
 // Smooth nav scrolling
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    document
-      .querySelector(link.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
 
@@ -53,4 +54,3 @@ document.addEventListener('keydown', e => {
     modal.classList.remove('active');
   }
 });
-
