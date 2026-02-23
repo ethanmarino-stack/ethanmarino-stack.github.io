@@ -13,17 +13,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWebSite" />
   <link rel="manifest" href="/site.webmanifest" />
-
-
-  
 </head>
 <body class="loading">
+
   <nav>
     <div class="brand">Ethan Marino</div>
-    <a href="#about">About Me</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact Me</a>
+    <div class="nav-links">
+      <a href="#about">About Me</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact Me</a>
+    </div>
   </nav>
 
   <section id="about" class="active">
@@ -31,61 +31,62 @@
     <div class="text">
       <h1>About Me</h1>
       <p>
-        Hi! My name is Ethan Marino. I currently live in Texas, though I’m originally from Massachusetts. I’m in my third year at Texas State University, pursuing a bachelor’s degree in Business Computer Information Systems. 
-        While I’m passionate about technology, I’m equally drawn to the outdoors. Whenever I can, I’m out skiing, backpacking, hiking, mountaineering, climbing, or traveling to new places. Staying active is important to me, so I make time to work out and keep myself in shape for the adventures I enjoy. 
+        Hi! My name is Ethan Marino. I currently live in Texas, though I'm originally from Massachusetts. I'm in my third year at Texas State University, pursuing a bachelor's degree in Business Computer Information Systems.
+        While I'm passionate about technology, I'm equally drawn to the outdoors. Whenever I can, I'm out skiing, backpacking, hiking, mountaineering, climbing, or traveling to new places. Staying active is important to me, so I make time to work out and keep myself in shape for the adventures I enjoy.
         Feel free to reach out using the contact information at the bottom of my page.
       </p>
     </div>
-
     <img class="about-side" src="images/pfp2.jpg" alt="Dr. Kelly Damphousse And I" />
   </section>
 
   <section id="gallery">
-    <a class="gallery-item" href="#">
+    <a class="gallery-item" href="images/wheeler1.jpg" target="_blank">
       <img src="images/wheeler1.jpg" alt="Wheeler Peak" />
       <span class="caption">Wheeler Peak, NM</span>
     </a>
-    <a class="gallery-item" href="#">
+    <a class="gallery-item" href="images/guad.jpg" target="_blank">
       <img src="images/guad.jpg" alt="Guadalupe Peak" />
       <span class="caption">Guadalupe Peak, TX</span>
     </a>
-    <a class="gallery-item" href="#">
+    <a class="gallery-item" href="images/washington1.jpg" target="_blank">
       <img src="images/washington1.jpg" alt="Mt. Washington" />
       <span class="caption">Mt. Washington, NH</span>
     </a>
-    <a class="gallery-item" href="#">
+    <a class="gallery-item" href="images/franconia.jpg" target="_blank">
       <img src="images/franconia.jpg" alt="Franconia Ridge Loop" />
       <span class="caption">Franconia Ridge Loop, NH</span>
     </a>
-    <a class="gallery-item" href="#">
+    <a class="gallery-item" href="images/palo.jpg" target="_blank">
       <img src="images/palo.jpg" alt="Palo Duro Canyon" />
       <span class="caption">Palo Duro Canyon, TX</span>
     </a>
-    <a class="gallery-item" href="#">
+    <a class="gallery-item" href="images/cannon.jpg" target="_blank">
       <img src="images/cannon.jpg" alt="Cannon Mountain" />
       <span class="caption">Cannon Mountain, NH</span>
     </a>
-    <a class="gallery-item" href="#">
+    <a class="gallery-item" href="images/bigbend1.jpg" target="_blank">
       <img src="images/bigbend1.jpg" alt="Big Bend" />
       <span class="caption">Big Bend, TX</span>
     </a>
   </section>
 
-  <div class="portfolio-intro">
-    <p>
-      These are my <strong>2 latest / work-in-progress projects</strong>.  
-      You can view my full portfolio on my GitHub at the bottom of this page.
-    </p>
-  </div>
-
-  <section id="portfolio">
-    <div class="card">
-      <h3>Project One</h3>
-      <p>Place holder for a project.</p>
+  <!-- Portfolio intro + cards wrapped in one section for proper scroll reveal -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="portfolio-intro">
+      <p>
+        These are my <strong>2 latest / work-in-progress projects</strong>.
+        You can view my full portfolio on my GitHub at the bottom of this page.
+      </p>
     </div>
-    <div class="card">
-      <h3>Project Two</h3>
-      <p>Another project place holder.</p>
+    <div class="portfolio-grid">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>Place holder for a project.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Another project place holder.</p>
+      </div>
     </div>
   </section>
 
@@ -102,7 +103,7 @@
   <!-- Email Modal -->
   <div class="modal-overlay" id="emailModal">
     <div class="modal">
-      <button class="close">×</button>
+      <button class="close" aria-label="Close modal">×</button>
       <h3>Email</h3>
       <p>emarinoxc@gmail.com</p>
     </div>
