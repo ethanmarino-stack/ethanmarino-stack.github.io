@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ethan Marino</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
 
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -40,52 +40,91 @@
   </section>
 
   <section id="gallery">
-    <a class="gallery-item" href="images/wheeler1.jpg" target="_blank">
+    <div class="gallery-item" href="images/wheeler1.jpg" target="_blank">
       <img src="images/wheeler1.jpg" alt="Wheeler Peak" />
       <span class="caption">Wheeler Peak, NM</span>
-    </a>
-    <a class="gallery-item" href="images/guad.jpg" target="_blank">
+    </div>
+    <div class="gallery-item" href="images/guad.jpg" target="_blank">
       <img src="images/guad.jpg" alt="Guadalupe Peak" />
       <span class="caption">Guadalupe Peak, TX</span>
-    </a>
-    <a class="gallery-item" href="images/washington1.jpg" target="_blank">
+    </div>
+    <div class="gallery-item" href="images/washington1.jpg" target="_blank">
       <img src="images/washington1.jpg" alt="Mt. Washington" />
       <span class="caption">Mt. Washington, NH</span>
-    </a>
-    <a class="gallery-item" href="images/franconia.jpg" target="_blank">
+    </div>
+    <div class="gallery-item" href="images/franconia.jpg" target="_blank">
       <img src="images/franconia.jpg" alt="Franconia Ridge Loop" />
       <span class="caption">Franconia Ridge Loop, NH</span>
-    </a>
-    <a class="gallery-item" href="images/palo.jpg" target="_blank">
+    </div>
+    <div class="gallery-item" href="images/palo.jpg" target="_blank">
       <img src="images/palo.jpg" alt="Palo Duro Canyon" />
       <span class="caption">Palo Duro Canyon, TX</span>
-    </a>
-    <a class="gallery-item" href="images/cannon.jpg" target="_blank">
+    </div>
+    <div class="gallery-item" href="images/cannon.jpg" target="_blank">
       <img src="images/cannon.jpg" alt="Cannon Mountain" />
       <span class="caption">Cannon Mountain, NH</span>
-    </a>
-    <a class="gallery-item" href="images/bigbend1.jpg" target="_blank">
+    </div>
+    <div class="gallery-item" href="images/bigbend1.jpg" target="_blank">
       <img src="images/bigbend1.jpg" alt="Big Bend" />
       <span class="caption">Big Bend, TX</span>
-    </a>
+    </div>
   </section>
 
-  <!-- Portfolio intro + cards wrapped in one section for proper scroll reveal -->
+  <!-- Portfolio section with slideshow -->
   <section id="portfolio" class="portfolio-section">
     <div class="portfolio-intro">
       <p>
-        These are my <strong>2 latest / work-in-progress projects</strong>.
+        This is my <strong>latest / work-in-progress project</strong>.
         You can view my full portfolio on my GitHub at the bottom of this page.
       </p>
     </div>
-    <div class="portfolio-grid">
-      <div class="card">
-        <h3>Project One</h3>
-        <p>Place holder for a project.</p>
+
+    <div class="project-showcase">
+      <h2 class="project-title">Most Recent Project — Self-Hosted Home Lab</h2>
+
+      <!-- Slideshow -->
+      <div class="slideshow-wrapper">
+        <button class="slide-arrow left" aria-label="Previous slide">&#8592;</button>
+
+        <div class="slideshow-track-container">
+          <div class="slideshow-track" id="slideshowTrack">
+            <div class="slide">
+              <img src="images/homelab1.jpg" alt="Home Lab - Dashboard" />
+            </div>
+            <div class="slide">
+              <img src="images/homelab2.jpg" alt="Home Lab - Setup" />
+            </div>
+            <div class="slide">
+              <img src="images/homelab3.jpg" alt="Home Lab - Setup-Continued" />
+            </div>
+            <div class="slide">
+              <img src="images/homelab4.jpg" alt="Home Lab - Upgrading" />
+            </div>
+          </div>
+        </div>
+
+        <button class="slide-arrow right" aria-label="Next slide">&#8594;</button>
       </div>
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>Another project place holder.</p>
+
+      <!-- Dot indicators -->
+      <div class="slide-dots" id="slideDots">
+        <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="dot" data-index="2" aria-label="Slide 3"></button>
+        <button class="dot" data-index="3" aria-label="Slide 4"></button>
+      </div>
+
+      <!-- Description -->
+      <div class="project-description">
+        <p>
+          This project is a <strong>self-hosted Linux homelab</strong> designed to explore systems administration, networking, and containerized infrastructure in a real-world environment. The server runs <strong>Linux Mint</strong> and hosts multiple services using <strong>Docker</strong>, with <strong>Portainer</strong> used to manage and monitor containers through a web interface.
+          <br><br>
+          Core services include a <strong>WireGuard VPN</strong> for secure remote access, <strong>AdGuard</strong> for network-wide DNS filtering and privacy, <strong>Uptime Kuma</strong> for service monitoring with mobile notifications, and a <strong>Jellyfin media server</strong>. A centralized homepage dashboard provides quick access to all services while displaying real-time system metrics such as CPU, RAM, and storage usage.
+          <br><br>
+          Through this project I gained hands-on experience with <strong>Linux server administration, Docker container deployment, VPN networking, and infrastructure monitoring</strong>. One of the main challenges was organizing multiple services to run reliably without port conflicts or excessive resource usage, which required configuring Docker networking and carefully managing container resources.
+          <br><br>
+          This homelab continues to evolve as a personal environment for experimenting with <strong>self-hosted applications, automation, and modern infrastructure tools</strong>.
+        </p>
       </div>
     </div>
   </section>
