@@ -54,3 +54,60 @@ document.addEventListener('keydown', e => {
     modal.classList.remove('active');
   }
 });
+
+// ── Slideshow ──────────────────────────────────────────────────────────────
+(function () {
+  const track = document.getElementById('slideshowTrack');
+  const dots = document.querySelectorAll('#slideDots .dot');
+  const prevBtn = document.querySelector('.slide-arrow.left');
+  const nextBtn = document.querySelector('.slide-arrow.right');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const slides = track.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+
+  function goTo(index) {
+    // Wrap around
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    // Update dots
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => goTo(Number(dot.dataset.index)));
+  });
+
+  // Keyboard arrow support when focused inside the slideshow
+  document.addEventListener('keydown', e => {
+    const portfolio = document.getElementById('portfolio');
+    if (!portfolio) return;
+    const rect = portfolio.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (!inView) return;
+
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  // Touch / swipe support
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', e => {
+    const delta = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 40) {
+      goTo(delta > 0 ? current + 1 : current - 1);
+    }
+  });
+})();
