@@ -217,7 +217,7 @@ main{
 
 /* Contact buttons */
 .socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-.contact-btn{background:transparent;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;position:relative;transition:color .18s ease,transform .18s ease;border:0}
+.contact-btn{background:transparent;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;font:inherit;font-weight:600;line-height:1.2;display:inline-flex;align-items:center;justify-content:center;position:relative;transition:color .18s ease,transform .18s ease;border:0}
 .contact-btn::after{content:'';position:absolute;left:8px;right:8px;bottom:6px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left center;border-radius:2px;transition:transform .22s cubic-bezier(.2,.9,.2,1);opacity:0.95}
 .contact-btn:hover{color:var(--accent);transform:translateY(-3px)}
 .contact-btn:hover::after{transform:scaleX(1)}
